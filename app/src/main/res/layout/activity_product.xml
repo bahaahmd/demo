@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="20dp"
+    android:elevation="60dp"
+    android:id="@+id/parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="140dp"
+        android:layout_height="176sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/parent_Relative"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_produit"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/AncienPrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_produit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="7000 Da"
+                android:fontFamily="sans-serif-black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/NouveauPrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AncienPrix"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="4000 Da"
+                android:fontFamily="sans-serif-black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_produit"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/AncienPrix"
+                android:text="Jusqu'au ..."
+                android:textSize="12sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NouveauPrix"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:elevation="12dp"
+                android:id="@+id/Image_Profile"
+                app:cardCornerRadius="40dp"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/NouveauPrix"
+                android:thicknessRatio="1.9">
+                <ImageView
+                   android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/PhotoProfile"
+                    android:src="@drawable/profile"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    >
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_produit"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="47dp"
+                android:layout_toEndOf="@+id/Image_Profile"
+                android:text="Bahaa-Eddine"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
