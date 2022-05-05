@@ -37,6 +37,12 @@ public class Produit_Nouveautés_Adapter extends RecyclerView.Adapter<Produit_No
         holder.ProductImage.setImageResource(ProductNewList.get(position).getImageUrl());
         holder.price_old.setText(ProductNewList.get(position).getPrice_ancien());
         holder.price_new.setText(ProductNewList.get(position).getPrice_nouveau());
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,ProductNewList.get(position).getName() , Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
