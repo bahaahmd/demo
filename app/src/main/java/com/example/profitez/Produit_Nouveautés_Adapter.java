@@ -33,7 +33,7 @@ public class Produit_Nouveautés_Adapter extends RecyclerView.Adapter<Produit_No
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Produit_Nouveautés_Adapter.ProduitViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull Produit_Nouveautés_Adapter.ProduitViewHolder holder,  int position) {
         holder.ProductImage.setImageResource(ProductNewList.get(position).getImageUrl());
         holder.price_old.setText(ProductNewList.get(position).getPrice_ancien());
         holder.price_new.setText(ProductNewList.get(position).getPrice_nouveau());
